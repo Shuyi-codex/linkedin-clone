@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Clone</title>
+
+  <!-- LOGO FAVICON -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+  <!-- STYLE SHEET -->
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <!-- ---------- NAV BAR ---------- -->
+  <nav>
+    <div class="container">
+      <div>
+        <a href=""><img class="logo" src="images/logo.png" alt="logo"></a>
+      </div>
+      <div class="links">
+        <ul>
+          <li>
+            <a href=""><i class="uil uil-newspaper"></i> <span>Articles</span></a>
+          </li>
+          <li>
+            <a href=""><i class="uil uil-users-alt"></i> <span>People</span></a>
+          </li>
+          <li>
+            <a href=""><i class="uil uil-book-open"></i> <span>Learning</span></a>
+          </li>
+          <li>
+            <a href=""><i class="uil uil-bag-alt"></i> <span>Jobs</span></a>
+          </li>
+        </ul>
+        <div class="nav-btns">
+          <button class="btn btn-tertiary">Join now</button>
+          <button class="btn btn-secondary">Sign in</button>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+  <main>
+    <!-- ---------- HERO SECTION ---------- -->
+    <section class="hero container">
+      <!-- LEFT -->
+      <div class="left">
+        <h1>Welcome to your professional community</h1>
+        <div class="inputs">
+          <label for="email">Email or phone</label>
+          <input type="text" id="email">
+
+          
+          <label for="password">Password</label>
+          <div class="mot-de-passe">
+            <input type="password" id="password">
+            <!-- <a class="show"><span>Show</span></a> -->
+          </div>
+        </div>
+
+        <a href="" class="forgot">Forgot password?</a>
+
+        <div class="buttons">
+          <button class="btn btn-primary">Sign in</button>
+          <p>or</p>
+          <button class="btn btn-tertiary"><i class="uil uil-google"></i>Continue with Google</button>
+          <button class="btn btn-secondary">New to LinkedIn? Join now</button>
+        </div>
+
+      </div>
+      <!-- RIGHT -->
+      <div class="right">
+        <img src="images/hero.svg">
+      </div>
+      </section>
+
+      <!-- ---------- SECOND SECTION ---------- -->
+      <section class="second">
+        <div class="container">
+          <!-- LEFT -->
+          <div class="left">
+            <h2>Explore collaborative articles</h2>
+            <p>We're unlocking community knowledge in a new way. Experts add insights directly into each
+              article, started with the help of AI.
+            </p>
+          </div>
+          <!-- RIGHT -->
+          <div class="right">
+            <div class="tags">
+              <a class="btn btn-tag"> Marketing </a>
+              <a class="btn btn-tag"> Public Administration </a>
+              <a class="btn btn-tag"> Healthcare </a>
+              <a class="btn btn-tag"> Engineering </a>
+              <a class="btn btn-tag"> IT Services </a>
+              <a class="btn btn-tag"> Sustainability </a>
+              <a class="btn btn-tag"> Business Administration </a>
+              <a class="btn btn-tag"> Telecommunications </a>
+              <a class="btn btn-tag"> Construction Management </a>
+              <a class="btn btn-secondary"> Show all </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- THIRD SECTION ---------- -->
+      <section class="third">
+        <div class="container">
+          <!-- LEFT -->
+          <div class="left">
+            <h2>Find the right job or intership for you</h2>
+          </div>
+          <!-- RIGHT -->
+          <div class="right">
+            <p>SUGGESTED SEARCHES</p>
+            <div class="tags">
+              <a class="btn btn-tag"> Engineering </a>
+              <a class="btn btn-tag"> Business Development </a>
+              <a class="btn btn-tag"> Finance </a>
+              <a class="btn btn-tag"> Adminstrative Assistant </a>
+              <a class="btn btn-tag"> Retail Associate </a>
+              <a class="btn btn-tag"> Customer Service </a>
+              <a class="btn btn-tag"> Operations </a>
+              <a class="btn btn-tag"> Information Technology </a>
+              <a class="btn btn-tag"> Marketing </a>
+              <a class="btn btn-tag"> Human Resources </a><br>
+              <a class="btn btn-tag"> Show more <i class="uil uil-angle-down"></i></a>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- FOURTH SECTION ---------- -->
+      <section class="fourth">
+        <div class="container">
+          <div class="left">
+            <h3>Post your job for millions of people to see</h3>
+          </div>
+          <div class="right">
+            <a href="" class="btn btn-secondary">Post a job</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- FIFTH SECTION ---------- -->
+      <section class="fifth">
+        <div class="container">
+          <div class="left">
+            <h3>Let the right people know you're open to work</h3>
+            <p>With the Open To Work feature, you can privately tell recruiters or publicly
+              share with the LinkedIn community that you are 
+              looking for new job opportunities.
+            </p>
+          </div>
+          <div class="right">
+            <img src="images/fifth_1.png"
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- SIXTH SECTION ---------- -->
+      <section class="sixth">
+        <div class="container">
+          <div class="left">
+            <img src="images/connect.svg">
+            <h2>Connect with people who can help</h2>
+            <a href="" class="btn btn-tag">Find people you know</a>
+          </div>
+
+          <div class="right">
+            <img src="images/learn.svg">
+            <div class="rt-msg">
+              <h2>Learn the skills you need to succeed</h2>
+              
+              <!-- Button to open the select options modal -->
+              <button id="modalButton" class="modal-btn">Choose a topic to learn about <i class="uil uil-angle-down"></i></button>
+              
+              <!-- Modal -->
+              <div id="selectModal" class="modal">
+                <div class="modal-content">
+                  <select class="custom-select" id="selectInput">
+                    <option value="">
+                      <li><a>
+                        <span class="topic-header">Business Analysis and Strategy</span>
+                        <span class="subtext">900+ courses</span>
+                      </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Business Software and Tools</span>
+                          <span class="subtext">1,960+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Career Development</span>
+                          <span class="subtext">490+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Customer Service</span>
+                          <span class="subtext">180+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Diversity, Equity, and Inclusion (DEI)</span>
+                          <span class="subtext">190+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Finance and Accounting</span>
+                          <span class="subtext">280+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Human Resources</span>
+                          <span class="subtext">390+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Leadership and Management</span>
+                          <span class="subtext">1,420+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Marketing</span>
+                          <span class="subtext">850+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Professional Development</span>
+                          <span class="subtext">1,390+ courses</span>
+                        </a></li>
+                    </option>
+                    <option value="">
+                      <li><a>
+                          <span class="topic-header">Project Management</span>
+                          <span class="subtext">420+ courses</span>
+                        </a></li>
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- SEVENTH SECTION ---------- -->
+      <section class="seventh">
+        <div class="left container">
+          <h2> Who is LinkedIn for? </h2>
+          <h3> Anyone looking to navigate their professional life.</h3>
+          <div class="find-who">
+            <a href="" class="btn-link">Find a coworker or classmate <i class="uil uil-angle-right-b"></i></a>
+            <a href="" class="btn-link">Find a new job <i class="uil uil-angle-right-b"></i></a>
+            <a href="" class="btn-link">Find a course or training <i class="uil uil-angle-right-b"></i></a>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/seventh.png">
+        </div>
+      </section>
+
+      <!-- ---------- EIGHTH SECTION ---------- -->
+      <section class="eighth">
+        <div class="cta-text">
+          <h2>Join your colleagues, classmates, and friends on LinkedIn.</h2>
+          <a href="" class="btn btn-primary">Get started</a>
+        </div>
+      </section>
+
+      <!-- ---------- NINTH SECTION ---------- -->
+      <section class="ninth">
+        <div class="container">
+          <img class="logo" src="images/logo.png" alt="logo">
+
+          <div class="link-cats">
+            <div class="cat">
+              <h3>General</h3>
+              <ul class="links">
+                <li class="items"><a href="">Sign Up</a></li>
+                <li class="items"><a href="">Help Center</a></li>
+                <li class="items"><a href="">About</a></li>
+                <li class="items"><a href="">Press</a></li>
+                <li class="items"><a href="">Blog</a></li>
+                <li class="items"><a href="">Careers</a></li>
+                <li class="items"><a href="">Developers</a></li>
+              </ul>
+            </div>
+
+            <div class="cat">
+              <h3>Browse LinkedIn</h3>
+              <ul class="links">
+                <li class="items"><a href="">Learning</a></li>
+                <li class="items"><a href="">Jobs</a></li>
+                <li class="items"><a href="">Salary</a></li>
+                <li class="items"><a href="">Mobile</a></li>
+                <li class="items"><a href="">Services</a></li>
+                <li class="items"><a href="">Products</a></li>
+              </ul>
+            </div>
+
+            <div class="cat">
+              <h3>Business Solutions</h3>
+              <ul class="links">
+                <li class="items"><a href="">Talent</a></li>
+                <li class="items"><a href="">Marketing</a></li>
+                <li class="items"><a href="">Sales</a></li>
+                <li class="items"><a href="">Learning</a></li>
+              </ul>
+            </div>
+
+            <div class="cat">
+              <h3>Directories</h3>
+              <ul class="links">
+                <li class="items"><a href="">Members</a></li>
+                <li class="items"><a href="">Jobs</a></li>
+                <li class="items"><a href="">Companies</a></li>
+                <li class="items"><a href="">Featured</a></li>
+                <li class="items"><a href="">Learning</a></li>
+                <li class="items"><a href="">Posts</a></li>
+                <li class="items"><a href="">Articles</a></li>
+                <li class="items"><a href="">Schools</a></li>
+                <li class="items"><a href="">News</a></li>
+                <li class="items"><a href="">News Letters</a></li>
+                <li class="items"><a href="">Services</a></li>
+                <li class="items"><a href="">Products</a></li>
+                <li class="items"><a href="">Advice</a></li>
+                <li class="items"><a href="">People Search</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <footer>
+    <ul class="footer-list">
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 14"
+          preserveAspectRatio="xMinYMin meet" version="1.1" fill="CurrentColor" focusable="false" class="lazy-loaded"
+          aria-busy="false">
+          <g class="inbug" fill-rule="evenodd">
+            <path
+              d="M14,1.25 L14,12.75 C14,13.44 13.44,14 12.75,14 L1.25,14 C0.56,14 0,13.44 0,12.75 L0,1.25 C0,0.56 0.56,0 1.25,0 L12.75,0 C13.44,0 14,0.56 14,1.25"
+              class="bug-text-color" fill="transparent" transform="translate(42.000000, 0.000000)"></path>
+            <path
+              d="M56,1.25 L56,12.75 C56,13.44 55.44,14 54.75,14 L43.25,14 C42.56,14 42,13.44 42,12.75 L42,1.25 C42,0.56 42.56,0 43.25,0 L54.75,0 C55.44,0 56,0.56 56,1.25 Z M47,5 L48.85,5 L48.85,6.016 L48.893,6.016 C49.259,5.541 50.018,4.938 51.25,4.938 C53.125,4.938 54,5.808 54,8 L54,12 L52,12 L52,8.75 C52,7.313 51.672,6.875 50.632,6.875 C49.5,6.875 49,7.75 49,9 L49,12 L47,12 L47,5 Z M44,12 L46,12 L46,5 L44,5 L44,12 Z M46.335,3 C46.335,3.737 45.737,4.335 45,4.335 C44.263,4.335 43.665,3.737 43.665,3 C43.665,2.263 44.263,1.665 45,1.665 C45.737,1.665 46.335,2.263 46.335,3 Z"
+              class="background"></path>
+          </g>
+          <g class="linkedin-text">
+            <path
+              d="M40,12 L38.107,12 L38.107,11.1 L38.077,11.1 C37.847,11.518 37.125,12.062 36.167,12.062 C34.174,12.062 33,10.521 33,8.5 C33,6.479 34.291,4.938 36.2,4.938 C36.971,4.938 37.687,5.332 37.97,5.698 L38,5.698 L38,2 L40,2 L40,12 Z M36.475,6.75 C35.517,6.75 34.875,7.49 34.875,8.5 C34.875,9.51 35.529,10.25 36.475,10.25 C37.422,10.25 38.125,9.609 38.125,8.5 C38.125,7.406 37.433,6.75 36.475,6.75 L36.475,6.75 Z">
+            </path>
+            <path
+              d="M31.7628,10.8217 C31.0968,11.5887 29.9308,12.0627 28.4998,12.0627 C26.3388,12.0627 24.9998,10.6867 24.9998,8.4477 C24.9998,6.3937 26.4328,4.9377 28.6578,4.9377 C30.6758,4.9377 31.9998,6.3497 31.9998,8.6527 C31.9998,8.8457 31.9708,8.9997 31.9708,8.9997 L26.8228,8.9997 L26.8348,9.1487 C26.9538,9.8197 27.6008,10.5797 28.6358,10.5797 C29.6528,10.5797 30.2068,10.1567 30.4718,9.8587 L31.7628,10.8217 Z M30.2268,7.9047 C30.2268,7.0627 29.5848,6.4297 28.6508,6.4297 C27.6058,6.4297 26.9368,7.0597 26.8728,7.9047 L30.2268,7.9047 Z">
+            </path>
+            <polygon points="18 2 20 2 20 7.882 22.546 5 25 5 21.9 8.199 24.889 12 22.546 12 20 8.515 20 12 18 12"></polygon>
+            <path
+              d="M10,5 L11.85,5 L11.85,5.906 L11.893,5.906 C12.283,5.434 13.031,4.938 14.14,4.938 C16.266,4.938 17,6.094 17,8.285 L17,12 L15,12 L15,8.73 C15,7.943 14.821,6.75 13.659,6.75 C12.482,6.75 12,7.844 12,8.73 L12,12 L10,12 L10,5 Z">
+            </path>
+            <path
+              d="M7,12 L9,12 L9,5 L7,5 L7,12 Z M8,1.75 C8.659,1.75 9.25,2.341 9.25,3 C9.25,3.659 8.659,4.25 8,4.25 C7.34,4.25 6.75,3.659 6.75,3 C6.75,2.341 7.34,1.75 8,1.75 L8,1.75 Z">
+            </path>
+            <polygon points="0 2 2 2 2 10 6 10 6 12 0 12"></polygon>
+          </g>
+        </svg>
+        <span>&copy; 2023</span>
+      </li>
+      <li><a href="">About</a></li>
+      <li><a href="">Accessibility</a></li>
+      <li><a href="">User Agreement</a></li>
+      <li><a href="">Privacy Policy</a></li>
+      <li><a href="">Cookie Policy</a></li>
+      <li><a href="">Copyright Policy</a></li>
+      <li><a href="">Brand Policy</a></li>
+      <li><a href="">Guest Controls</a></li>
+      <li><a href="">Community Guidelines</a></li>
+      <li><a>Language <i class="uil uil-angle-down"></i></a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
