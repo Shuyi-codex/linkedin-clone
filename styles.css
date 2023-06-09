@@ -726,3 +726,37 @@ footer .footer-list .last-li a:hover {
   cursor: pointer;
   text-decoration: none;
 }
+
+
+
+/* --------------------------
+  MEDIA QUERIES - BIG TABLETS
+----------------------------- */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 98%;
+  }
+
+  .scroll-left {
+  right: 1100px;
+  }
+
+  .scroll-right {
+    left: 1100px;
+  }
+}
+
+/* --------------------------
+  MEDIA QUERIES - BIG TABLETS
+----------------------------- */
+@media screen and (max-width: 992px) {
+  .nav-links, .nav-btns::before {
+    display: none;
+  }
+
+  footer .footer-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 2rem;
+  }
+}
