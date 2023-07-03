@@ -154,7 +154,7 @@
       <!-- ---------- FIFTH SECTION ---------- -->
       <section class="fifth">
         <div class="container">
-          <a> <svg class="scroll-left" id="changeColor" fill="#DC7633" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          <a onclick="setSlides(-1)" class="prev"> <svg class="scroll-left" id="changeColor" fill="#DC7633" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="68" zoomAndPan="magnify" viewBox="0 0 375 374.9999" height="68" preserveAspectRatio="xMidYMid meet"
             version="1.0" style="transform: scale(-1, 1);">
             <defs></defs>
@@ -167,7 +167,7 @@
                   id="mainIconPathAttribute" fill="#ffffff" stroke-width="0" stroke="#ff0000"></path>
               </svg> </g>
           </svg> </a>
-          <div class="bundle one">
+          <div class="bundle active one">
             <div class="left">
               <h3>Let the right people know you're open to work</h3>
               <p>With the Open To Work feature, you can privately tell recruiters or publicly
@@ -204,7 +204,7 @@
               <img src="images/fifth_3.png">
             </div>
           </div>
-          <a> <svg class="scroll-right" id="changeColor" fill="#DC7633" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          <a onclick="setSlides(1)" class="next"> <svg class="scroll-right" id="changeColor" fill="#DC7633" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="200" zoomAndPan="magnify" viewBox="0 0 375 374.9999" height="200" preserveAspectRatio="xMidYMid meet"
             version="1.0" style="transform: none;">
             <defs></defs>
@@ -240,7 +240,51 @@
               <!-- Modal -->
               <div id="selectModal" class="modal">
                 <div class="modal-content">
-                  <select class="custom-select" id="selectInput">
+                  <li class="options"><a href="">
+                      <span class="topic-header">Business Analysis and Strategy</span>
+                      <span class="subtext">890+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Business Software and Tools</span>
+                      <span class="subtext">1,960+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Career Development</span>
+                      <span class="subtext">490+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Customer Service</span>
+                      <span class="subtext">180+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Diversity, Equity, and Inclusion (DEI)</span>
+                      <span class="subtext">190+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Finance and Accounting</span>
+                      <span class="subtext">280+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Human Resources</span>
+                      <span class="subtext">390+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Leadership and Management</span>
+                      <span class="subtext">1,420+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Marketing</span>
+                      <span class="subtext">850+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Professional Development</span>
+                      <span class="subtext">1,390+ courses</span>
+                    </a></li>
+                  <li class="options"><a href="">
+                      <span class="topic-header">Project Management</span>
+                      <span class="subtext">420+ courses</span>
+                    </a></li>
+                  <!-- <select class="custom-select" id="selectInput">
                     <option value="">
                       <li><a>
                         <span class="topic-header">Business Analysis and Strategy</span>
@@ -307,7 +351,7 @@
                           <span class="subtext">420+ courses</span>
                         </a></li>
                     </option>
-                  </select>
+                  </select> -->
                 </div>
               </div>
             </div>
@@ -459,5 +503,6 @@
     
   </footer>
 
+  <script src="index.js"></script>
 </body>
 </html>

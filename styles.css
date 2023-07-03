@@ -136,7 +136,7 @@ nav ul li {
 nav ul li a {
   color: var(--color-dark);
   font-size: 1rem;
-  transition: all 300ms ease;
+  transition: all 100ms ease;
 }
 nav ul li a:hover {
   color: #000;
@@ -409,11 +409,15 @@ main .fifth {
 }
 
 main .fifth .container .bundle {
-  display: grid;
+  display: none;
   grid-template-columns: 50% 50%;
   column-gap: 2rem;
   position: relative;
   padding: 15rem 0;
+  transition: all 0.5s ease;
+}
+main .fifth .container .active {
+  display: grid;
 }
 
 .scroll-left, .scroll-right {
@@ -530,6 +534,7 @@ main .sixth .container .right .rt-msg .modal-btn {
 }
 main .sixth .container .right .rt-msg .modal-btn:hover {
   background-color: var(--color-light);
+  cursor: pointer;
 }
 
 main .sixth .container .right .rt-msg .modal-btn i {
@@ -540,24 +545,46 @@ main .sixth .container .right .rt-msg .modal {
   position: absolute;
   z-index: 1;
   left: 1;
-  top: 1;
+  top: 744px;
   width: 380px;
-  height: 300px;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 40%;
+  overflow: scroll;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 1rem var(--color-gray);
+  display: none;
+}
+
+main .sixth .container .right .rt-msg .open {
+  display: block;
 }
 
 main .sixth .container .right .rt-msg .modal .modal-content {
-  background-color: #fefefe;
   margin: 0 auto;
-  padding: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 0 1rem rgba(250, 0, 0, 0.3);
-  width: 380px;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
 }
 
-main .sixth .container .right .rt-msg .modal .custom-select {
-  margin-bottom: 1.5rem;
+main .sixth .container .rt-msg .options {
+  margin-top: 1.5rem;
+}
+
+main .sixth .container .options span {
+  display: block;
+  color: var(--color-black);
+}
+main .sixth .container .options:hover {
+  text-decoration: underline var(--color-primary);
+  cursor: pointer;
+}
+main .sixth .container .options .topic-header {
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .sixth .container .options .subtext {
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 main .sixth .container .right .rt-msg .modal .modal-content  select.custom-select {
