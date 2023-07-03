@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400;700&display=swap');
+
+:root {
+  --color-primary: hsl(201, 100%, 35%);
+  --color-black: hsl(252, 30%, 10%);
+  --color-white: hsl(252, 30%, 100%);
+  --color-light: hsl(252, 30%, 95%);
+  --color-dark: #4d4d4d;
+  --color-ash: #6e6e6e;
+  --color-gray: #969696;
+
+  --border-radius: 2rem;
+  --card-border-radius: 0.6rem;
+  --btn-padding: 1rem 1.2rem;
+  --input-padding: 1.2rem 1rem;
+  --card-padding: 1rem 1rem;
+
+  --sticky-top-left: 2rem;
+  --sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  ;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.3rem;
+  font-weight: 300;
+  color: #85564e;
+  padding: 2rem 0;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--color-black);
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #a83830;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--color-dark);
+}
+
+.active {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.1rem;
+  position: absolute;
+  background: var(--color-black);
+  margin-top: 0.2rem;
+}
+
+.container {
+  width: 84%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: var(--btn-padding);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+}
+
+.btn-tertiary {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.big-pic {
+  width: 4.5rem;
+  aspect-ratio: 2/2.2;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+.card-special {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  border: 1px solid hsl(0, 0%, 86%);
+  padding: 0.8rem 0;
+  padding-bottom: 0;
+}
+
+.cs-padding {
+  padding: 0 1rem;
+}
+
+.dp {
+  aspect-ratio: 2/2.1;
+  width: 3.5rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-mini {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.profile-picture {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+/* ----- SEARCH BOX ----- */
+.search {
+  padding: 0.5rem 2.5rem;
+  background-color: hsl(195, 31%, 95%);
+  border: 2px solid hsl(195, 31%, 95%);
+  border-radius: 5px;
+  width: 18rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.search:focus {
+  width: 24rem;
+  border: 2px solid var(--color-black);
+  padding-left: 3.2rem;
+  transition: 0.3s;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  font-size: 1.2em;
+  font-weight: 600;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* **** SEARCH BOX ENDS **** */
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  width: 100%;
+  background-color: var(--color-white);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+nav .container {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  justify-content: space-between;
+  align-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  height: 55px;
+}
+
+/* ----- LEFT NAV ----- */
+
+.lt {
+  display: flex;
+  gap: 0.5rem;
+  align-self: center;
+}
+
+
+/* ---------- RIGHT NAV ---------- */
+.rt .links {
+  display: flex;
+  min-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.link i .notification-count,
+.link i .mynet-count {
+  color: var(--color-white);
+  background-color: rgb(204, 13, 13);
+  font-size: 0.7rem;
+  font-style: normal;
+  width: fit-content;
+  border-radius: 100%;
+  padding: 0.1rem 0.3rem;
+  position: absolute;
+  top: 0.4rem;
+  margin-left: -0.8rem;
+}
+
+.rt .item {
+  width: 5.2rem;
+  text-align: center;
+}
+
+.rt a {
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin: auto auto;
+  align-content: center;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.rt li:hover,
+.rt a:hover {
+  color: var(--color-black);
+}
+
+.rt i {
+  display: block;
+  font-size: 25px;
+}
+
+.pro-pic {
+  margin-top: 4px;
+}
+
+.pro-pic .profile-picture {
+  width: 1.6rem;
+}
+
+.premium {
+  padding: 0 0.1rem;
+  width: 6rem;
+  text-align: center;
+}
+
+.premium a {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #913d2f;
+  line-height: 1.6;
+}
+
+/* ************ MAIN ************ */
+main {
+  position: relative;
+  top: 5rem;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 14.5rem auto 19rem;
+  column-gap: 2rem;
+  position: relative;
+}
+
+/* ****** LEFT ***** */
+main .container .left {
+  height: max-content;
+  position: sticky;
+  top: -23rem;
+}
+
+.profile-card {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  border: 1px solid hsl(0, 0%, 86%);
+  margin-bottom: 0.5rem;
+}
+
+.pro-bg {
+  background: linear-gradient(0.2turn, #93a4b4, #c0d2e0, #b3cee9);
+  width: 100%;
+  height: 3.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.profile {
+  padding: var(--card-padding);
+  text-align: center;
+  position: relative;
+}
+
+.profile-link {
+  display: block;
+  padding-top: 2.5rem;
+  color: var(--color-black);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+.profile img {
+  border: 2px solid var(--color-white);
+  position: absolute;
+  top: -25%;
+  left: 35%;
+}
+
+.profile p {
+  font-size: 0.7rem;
+  padding-top: 0.5rem;
+}
+
+.connection {
+  border-top: 1px solid hsl(0, 0%, 86%);
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+}
+
+.connection .first {
+  padding: 0.3rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.connection .first:hover,
+.connection .second:hover {
+  background-color: var(--color-light);
+}
+
+.connection p:first-child {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  align-self: center;
+  margin: 0.1rem 0;
+}
+
+.count {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.connection p:last-child {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.second a {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.second {
+  padding: 0.4rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prem {
+  padding: var(--card-padding);
+}
+
+.prem:hover {
+  background-color: var(--color-light);
+}
+
+.prem-link p:first-child {
+  font-size: 0.7rem;
+}
+
+.p4f {
+  font-size: 0.8rem;
+  color: var(--color-black);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.p4f:hover {
+  color: var(--color-primary)
+}
+
+.bookmark {
+  border-top: 1px solid hsl(0, 0%, 86%);
+  padding: var(--card-padding);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.bookmark a {
+  display: block;
+}
+
+.bookmark i {
+  font-size: 1rem;
+  padding-right: 0.2rem;
+}
+
+.bookmark:hover {
+  background-color: var(--color-light);
+}
+
+.recent-card {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+.recent-card .groups {
+  margin-top: 1rem;
+}
+
+.groups h6 {
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+}
+
+.lgt {
+  font-weight: 400;
+}
+
+.hh {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+.hhh {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.hh:hover,
+.hhh:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.groups a {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  padding: 0.1rem 1rem;
+}
+
+.groups a:hover {
+  background-color: var(--color-light);
+  color: var(--color-black);
+}
+
+.recent-card li i {
+  font-size: 1.2rem;
+}
+
+.groups .see-all {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  padding: 0.2rem 2.5rem;
+  margin: 0.4rem 0;
+}
+
+.groups .see-all:hover {
+  background-color: var(--color-light);
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.see-all span {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 0.5rem;
+}
+
+.disc-more {
+  border-top: 1px solid var(--color-gray);
+  text-align: center;
+  padding: var(--card-padding);
+}
+
+.disc-more:hover {
+  background-color: var(--color-light);
+}
+
+.disc-more a {
+  display: block;
+  font-size: 0.9rem;
+  width: 100%;
+  height: 100%;
+}
+
+.disc-more a:hover {
+  color: var(--color-black);
+}
+
+/* ********** MIDDLE SECTION ********* */
+.middle .post-card {
+  padding-top: 0.8rem;
+  padding-bottom: 0.2rem;
+}
+
+.middle .new-post {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.new-post .profile-picture {
+  border: 1px solid var(--color-gray);
+}
+
+.new-post .btn {
+  width: 100%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--color-ash);
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.new-post .btn:hover {
+  background-color: var(--color-light)
+}
+
+.middle .post-type {
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.middle .post-type ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-type ul li {
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.post-type ul li:hover {
+  background-color: var(--color-light);
+  cursor: pointer;
+}
+
+.post-type li i {
+  font-size: 1.5rem;
+}
+
+.post-type li a {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.blue {
+  color: var(--color-primary);
+}
+
+.green {
+  color: rgb(17, 133, 17);
+}
+
+.gold {
+  color: goldenrod;
+}
+
+.orange {
+  color: orangered;
+}
+
+
+/* ****** SORT TIMELINE ****** */
+.sorter {
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  text-align: right;
+}
+
+.sorter span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sorter a {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.sorter a::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1.3px;
+  position: absolute;
+  top: 50%;
+  background-color: var(--color-gray);
+}
+
+/* ********* FEED ********** */
+.feed {
+  margin-bottom: 0.5rem;
+}
+
+.feed .head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.head .user a {
+  display: flex;
+  gap: 0.5rem;
+  width: 90%;
+  align-items: center;
+}
+
+.user .dp {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.user .nom {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user .nom:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.user .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  width: 80%;
+}
+
+.info span {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-dark);
+}
+
+.feed .info small {
+  font-size: 0.7rem;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.head .edit {
+  display: flex;
+  gap: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.edit i {
+  padding: 0 0.1rem;
+  cursor: pointer;
+}
+
+.head .edit i:hover {
+  border-radius: 100%;
+  background-color: var(--color-light);
+}
+
+.feed .body-text {
+  margin-bottom: 0.5rem;
+}
+
+.feed .body-text .real-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2rem;
+  width: 95%;
+  height: 30px;
+}
+
+.body-text .see-text {
+  width: 100%;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  padding: 0.2rem;
+}
+
+.body-text .see-text:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.feed .body-image {
+  cursor: pointer;
+  padding: 1px;
+}
+
+.feed .interactions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.interactions .emoji {
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 0.5rem;
+  color: var(--color-white);
+}
+
+.like {
+  background-color: var(--color-primary);
+}
+
+.love {
+  background-color: rgb(236, 30, 30);
+}
+
+.idea {
+  background-color: rgb(13, 107, 55);
+}
+
+.love,
+.idea {
+  margin-left: -10px;
+}
+
+.likes .amount {
+  margin-left: 2px;
+}
+
+.likes .amount:hover,
+.comments span:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.feed .empty-line {
+  border-bottom: 1px solid var(--color-light);
+  padding-top: 0.1rem;
+  margin: 0 1rem;
+}
+
+.feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+  padding: 0.3rem 1.5rem;
+  font-size: 1rem;
+}
+
+.action-buttons span {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.action-buttons span:hover {
+  cursor: pointer;
+  background-color: var(--color-light);
+}
+
+.action-buttons i {
+  font-size: 1.5rem;
+}
+
+/* ******** RIGHT ******** */
+main .container .right {
+  height: max-content;
+  position: sticky;
+  top: -23rem;
+}
+
+.recommendations {
+  margin-bottom: 0.5rem;
+}
+
+.recommendations .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.heading i {
+  font-size: 0.7rem;
+  border-radius: 2px;
+  color: var(--color-white);
+  background-color: var(--color-ash);
+  cursor: pointer;
+}
+
+.recommendations .profiles .user {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.recommendations .info h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+}
+
+.recommendations .info small {
+  font-size: 0.7rem;
+}
+
+.recommendations .info button {
+  width: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid var(--color-dark);
+  padding: 0.2rem;
+  color: var(--color-gray);
+  background-color: transparent;
+  margin-top: 0.5rem;
+  height: 2rem;
+  transition-delay: 0.1s;
+}
+
+.recommendations .info button:hover {
+  background-color: var(--color-light);
+  border: 2px solid var(--color-black);
+}
+
+.recommendations .info button i {
+  color: var(--color-dark);
+  font-weight: 900;
+}
+
+.recommendations .view-all a {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.recommendations .view-all i {
+  font-size: 1.8rem;
+  color: var(--color-dark);
+}
+
+/* ********** AD CARD ********** */
+
+.right .card .ad .ad-head {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-bottom: 0.3rem;
+}
+
+.ad-head i {
+  font-size: 1rem;
+}
+
+.ad-body {
+  text-align: center;
+}
+
+.ad-body p {
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.ad-body .imgs {
+  display: flex;
+  padding: 0 3rem;
+}
+
+.ad-body p:last-of-type {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.ad-body button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2rem 1rem;
+  height: 2.5rem;
+}
+
+/* ********** FOOTER ********** */
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0 2.2rem;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.footer-links li a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+footer .footer-copyright {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+/* --------------------------
+  MEDIA QUERIES - BIG TABLETS
+----------------------------- */
+@media screen and (max-width: 1230px) {
+  .container {
+    width: 95%;
+    transition: linear 0.2s;
+  }
+
+  nav .container {
+    grid-template-columns: 30% 70%;
+  }
+}
