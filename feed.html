@@ -83,7 +83,7 @@
               <span> Emmanuel Adeniyi </span>
             </a>
             <p>Software Engineer | UX/UI Designer |
-              Cybersecurity Expert | Biomedical Scientist
+              Cybersecurity Analyst | Biomedical Scientist
             </p>
           </div>
           <div class="connection">
@@ -155,7 +155,7 @@
             <a href="" class="profile-picture dp">
               <img src="images/profile-pic.jpg" alt="profile picture">
             </a>
-            <a class="btn btn-secondary"> Start a post </a>
+            <a class="btn btn-secondary" id="newPost"> Start a post </a>
           </div>
           <div class="post-type">
             <ul>
@@ -568,6 +568,43 @@
 
     </div>
   </main>
+
+  <!-- ---------- NEW POST BOX ---------- -->
+  <div class="post-box">
+    <div class="card-special">
+      <div class="head">
+        <div class="user">
+          <figure class="profile-picture dp">
+            <img src="images/profile-pic.jpg" alt="profile picture">
+          </figure>
+          <div class="info">
+            <h4> Emmanuel Adeniyi <span>&#x25BC</span></h4>
+            <small>Post to Anyone</small>
+          </div>
+        </div>
+        <i class="uil uil-times close-btn"></i>
+      </div>
+      <form action="">
+        <div class="text-box">
+          <textarea id="postArea" maxlength="3000" placeholder="What do you want to talk about?"></textarea>
+        </div>
+        <div class="emoji">
+          <i class="uil uil-smile"></i>
+        </div>
+        <div class="attachments">
+          <i class="uil uil-scenery"></i>
+          <i class="uil uil-video"></i>
+          <i class="uil uil-schedule"></i>
+          <i class="uil uil-ellipsis-h"></i>
+        </div>
+        <div class="empty"></div>
+        <div class="post-submit">
+          <i class="uil uil-clock"></i>
+          <input type="submit" value="Post" class="btn">
+        </div>
+      </form>
+    </div>
+  </div>
 
   <!-- <i class="uil uil-user-arrows"></i>
   

@@ -35,7 +35,7 @@ body {
   font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
   color: var(--color-dark);
   background-color: var(--color-light);
-  ;
+  display: grid;
   overflow-x: hidden;
 }
 
@@ -410,6 +410,7 @@ main .container .left {
   color: var(--color-black);
   font-weight: 600;
   text-decoration: underline;
+  display: block;
 }
 
 .p4f:hover {
@@ -960,6 +961,171 @@ footer .footer-copyright {
   align-items: center;
   font-size: 0.8rem;
 }
+
+
+
+/* ********** NEW POST MODAL ********** */
+.post-box {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  display: none;
+}
+
+.post-box .card-special {
+  width: 55%;
+  height: 90%;
+}
+
+.post-box .card-special .head {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 1.2rem;
+}
+
+.post-box .card-special .head .user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: var(--card-border-radius);
+  cursor: pointer;
+}
+
+.post-box .card-special .head .user:hover {
+  background-color: var(--color-light);
+}
+
+.post-box .card-special .head i {
+  font-size: 2rem;
+  height: 100%;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+}
+
+.post-box .card-special .head i:hover {
+  background-color: var(--color-light);
+  border-radius: 100%;
+}
+
+.post-box .card-special .head .user .dp {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.post-box .info h4 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.post-box .info h4 span {
+  font-size: 1rem;
+}
+
+.post-box .info small {
+  font-size: 0.9rem;
+}
+
+.post-box .card-special	 .text-box {
+  height: 260px;
+  padding: 0 1.2rem;
+}
+
+.post-box .card-special textarea {
+  height: auto;
+  color: var(--color-ash);
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #9c9c9c;
+}
+
+.post-box .card-special .emoji {
+  /* position: fixed;
+  top: 26rem; */
+  width: max-content;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.5rem;
+  margin-left: 1.2rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.post-box .card-special .emoji:hover {
+  background-color: var(--color-light);
+}
+
+.post-box .card-special .attachments {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0 1.2rem;
+}
+
+.attachments i {
+  font-size: 1.5rem;
+  padding: 1rem 1.1rem;
+  background-color: var(--color-light);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.attachments i:hover {
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(153, 153, 153, 1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(153, 153, 153, 1);
+  box-shadow: 0px 2px 2px 0px rgba(153, 153, 153, 1);
+}
+
+.post-box .empty {
+  margin-top: 1.2rem;
+  padding: 0;
+  border-top: 1px solid var(--color-light);
+}
+
+.post-box .post-submit {
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.post-box .post-submit i {
+  font-size: 1.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.post-box .post-submit i:hover {
+  background-color: var(--color-light);
+}
+
+.post-box .post-submit .btn {
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+}
+
+.post-box .post-submit .btn:hover {
+  background-color: hsl(201, 100%, 25%)
+}
+
 
 /* --------------------------
   MEDIA QUERIES - BIG TABLETS
