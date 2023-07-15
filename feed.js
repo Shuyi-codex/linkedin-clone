@@ -17,6 +17,13 @@ const postArea = document.querySelector("#postArea");
 // Close Icon
 const closeIcon = document.querySelector(".close-btn");
 
+// Hidden items
+const hiddenItems = document.querySelectorAll(".hiddendown");
+
+// Button controls for hidden items
+const showMoreBtn = document.querySelector(".show-more");
+const showLessBtn = document.querySelector(".show-less");
+
 // xxxxxxxxx Variables End xxxxxxxxxx
 
 
@@ -59,6 +66,7 @@ for (var i = 0; i < postList.length; i++) {
 // OPEN NEW POST MODAL
 newPost.addEventListener("click", () => {
   postBox.style.display = "grid";
+  postArea.focus();
   if (postBox.style.display == "grid") {
     // disable background scroll on modal open
     document.body.style.overflowY = "hidden";
@@ -66,15 +74,50 @@ newPost.addEventListener("click", () => {
 })
 
 // CLOSE MODAL
-closeIcon.addEventListener("click", () => {
-  postBox.style.display = "none";
-  // Activate the scroll button on modal close
-  document.body.style.overflowY = "scroll";
-})
+const closePostModal = (e) => {
+  if (e.target.classList.contains("post-box") || e.target.classList.contains("close-btn")) {
+    postBox.style.display = "none";
+
+    // Activate the scroll button on modal close
+    document.body.style.overflowY = "scroll";
+  }
+
+}
+
+closeIcon.addEventListener("click", closePostModal);
+postBox.addEventListener("click", closePostModal);
+
+// closeIcon.addEventListener("click", () => {
+//   postBox.style.display = "none";
+//   // Activate the scroll button on modal close
+//   document.body.style.overflowY = "scroll";
+// })
 
 // Increase Text area size dynamically
 postArea.addEventListener("input", () => {
   postArea.style.height = "auto";
   postArea.style.height = (postArea.scrollHeight) + "px";
   postArea.style.maxHeight = "256px";
+})
+
+// Show hidden items
+
+if (showMoreBtn.style.display !== "none") {
+  showMoreBtn.addEventListener("click", () => {
+    hiddenItems.forEach(item => {
+      item.style.display = "grid";
+      showMoreBtn.classList.add("hide-now");
+      showLessBtn.classList.remove("hide-now");
+    });
+})
+}
+
+// Hide shown hidden items
+showLessBtn.addEventListener("click", () => {
+  hiddenItems.forEach(item => {
+    item.style.display = "none";
+    showMoreBtn.classList.remove("hide-now");
+    showLessBtn.classList.add("hide-now");
+    window.scrollTo(0, 0);
+  });
 })
