@@ -87,11 +87,6 @@ const closePostModal = (e) => {
 closeIcon.addEventListener("click", closePostModal);
 postBox.addEventListener("click", closePostModal);
 
-// closeIcon.addEventListener("click", () => {
-//   postBox.style.display = "none";
-//   // Activate the scroll button on modal close
-//   document.body.style.overflowY = "scroll";
-// })
 
 // Increase Text area size dynamically
 postArea.addEventListener("input", () => {
@@ -101,7 +96,6 @@ postArea.addEventListener("input", () => {
 })
 
 // Show hidden items
-
 if (showMoreBtn.style.display !== "none") {
   showMoreBtn.addEventListener("click", () => {
     hiddenItems.forEach(item => {
@@ -113,11 +107,34 @@ if (showMoreBtn.style.display !== "none") {
 }
 
 // Hide shown hidden items
-showLessBtn.addEventListener("click", () => {
-  hiddenItems.forEach(item => {
-    item.style.display = "none";
-    showMoreBtn.classList.remove("hide-now");
-    showLessBtn.classList.add("hide-now");
-    window.scrollTo(0, 0);
+if (showLessBtn.style.display !== "none") {
+  showLessBtn.addEventListener("click", () => {
+    hiddenItems.forEach(item => {
+      item.style.display = "none";
+      showMoreBtn.classList.remove("hide-now");
+      showLessBtn.classList.add("hide-now");
+      window.scrollTo(0, 0);
+    });
   });
-})
+}
+
+// reveal hidden items when moving from small screen size to larger screen
+function handleResize() {
+  var screenWidth = window.innerWidth;
+
+  if (screenWidth >= 760) {
+    hiddenItems.forEach(item => {
+      item.style.display = "grid";
+    });
+  } else {
+    hiddenItems.forEach(item => {
+      item.style.display = "none";
+      showMoreBtn.classList.remove("hide-now");
+      showLessBtn.classList.add("hide-now");
+    })
+  }
+}
+
+handleResize();
+
+window.addEventListener("resize", handleResize);

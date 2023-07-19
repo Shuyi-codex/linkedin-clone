@@ -317,13 +317,13 @@ main .container {
 }
 
 /* Show more  function, activated on small screens to toggle on and off more info*/
-.show-more {
+.show-more, .show-less {
   display: none;
 }
 
-.hiddendown {
+/* .hiddendown {
   display: grid;
-}
+} */
 
 
 /* ****** LEFT ***** */
@@ -1291,7 +1291,7 @@ textarea::placeholder {
   }
 
   .sorter a::before {
-    width: 82%;
+    width: 76%;
   }
 
   .hiddendown {
