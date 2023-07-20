@@ -189,7 +189,7 @@ main .hero .left input {
   outline: solid 1px var(--color-black);
   padding: var(--input-padding);
   border-radius: 2px;
-  width: 70%;
+  width: 25rem;
   margin-bottom: 1.5rem;
 }
 
@@ -225,11 +225,11 @@ main .hero .forgot:hover {
 }
 
 main .hero .left button {
-  width: 70%;
+  width: 25rem;
 }
 
 .buttons p {
-  width: 70%;
+  width: 25rem;
   margin: 1.5rem 0;
   display: flex;
   flex-direction: row;
@@ -759,9 +759,38 @@ footer .footer-list .last-li a:hover {
 /* --------------------------
   MEDIA QUERIES - BIG TABLETS
 ----------------------------- */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 990px) {
   .container {
     width: 98%;
+  }
+
+  .logo {
+    height: 30px;
+    width: 90px;
+  }
+
+  .nav-links, nav .nav-btns::before {
+    display: none;
+  }
+
+  main .second .container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  main .second .container .left {
+    width: 100%;
+  }
+
+  main .second .container .left h2 {
+    width: 100%;
+  }
+
+  main .second .container .right {
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;
   }
 
   .scroll-left {
@@ -771,19 +800,43 @@ footer .footer-list .last-li a:hover {
   .scroll-right {
     left: 1100px;
   }
-}
-
-/* --------------------------
-  MEDIA QUERIES - BIG TABLETS
------------------------------ */
-@media screen and (max-width: 992px) {
-  .nav-links, .nav-btns::before {
-    display: none;
-  }
 
   footer .footer-list {
     display: grid;
     grid-template-columns: 50% 50%;
     margin-top: 2rem;
+  }
+}
+
+/* --------------------------
+  MEDIA QUERIES - BIG TABLETS
+----------------------------- */
+@media screen and (max-width: 780px) {
+  .container {
+    width: 96%
+  }
+
+  nav .nav-btns::before {
+    display: none;
+  }
+  
+  main .hero {
+    grid-template-columns: 1fr;
+  }
+
+  main .hero .left input {
+    width: 100%;
+  }
+
+  main .hero .left .buttons .btn, main .hero .left p {
+    margin: 1rem auto;
+  }
+
+  main .hero .left p {
+    width: 100%;
+  }
+
+  main .hero .left .buttons .btn-secondary {
+    width: 100%;
   }
 }
